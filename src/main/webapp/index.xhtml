@@ -11,7 +11,6 @@
 <h:body>
     <main class="main-container">
         <figure style="display: flex; justify-content: center;">
-            <img src="img/img-banner.png"></img>
         </figure>
         <h:form style="display: flex; justify-content: center;">
             <section class="main-form-container">
@@ -33,8 +32,15 @@
                             <p:watermark for="peso" value="Kg"/>
                         </div>
                     </div>
-                    <p:commandButton action="#{indexController.submit}" update="@form" value="Calcular"></p:commandButton>
-                    <p:inputText value="#{indexController.result}" disabled="true"/>
+                  <div>
+                  <p:commandButton action="#{indexController.submit}" update="@form" value="Calcular"></p:commandButton>
+                  <p:commandButton action="#{indexController.clear}" update="@form" value="Limpar"></p:commandButton>                
+                  </div>
+                  <div>                    
+                    <p:inputText value="#{indexController.diagnostico}" disabled="true"/>
+                  </div>                    
+                   <div>
+                  </div>                   
                 </div>
             </section>
         </h:form>

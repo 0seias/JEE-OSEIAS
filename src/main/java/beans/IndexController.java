@@ -9,11 +9,11 @@ import java.io.Serializable;
 @Named
 @SessionScoped
 public class IndexController implements Serializable {
-    private Integer idade;
-    private Double altura;
-    private Double peso;
-    private Double resultado;
-	private String diagnostico;
+    private Integer idade=null;
+    private Double altura=null;
+    private Double peso=null;
+    private Double resultado= null;
+	private String diagnostico= null;
 
     @Inject
     private IMC calculo;
@@ -33,6 +33,15 @@ public class IndexController implements Serializable {
         this.resultado = calculo.calculoIMC(altura, peso);
         this.diagnostico = calculo.diagnosticoIMC(resultado);
     }
+    
+    public void clear() {
+        this.idade = null;
+        this.altura = null;
+        this.peso = null;
+        this.resultado = null;
+        this.diagnostico = "";
+    }
+
 
     public Integer getIdade() {
         return idade;
