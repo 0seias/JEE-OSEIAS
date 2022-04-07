@@ -36,7 +36,7 @@ public String diagnosticoIMC(double resultado) {
 			{
 				if((resultado>25) && (resultado<=30))
 				{
-					diagnostico = "Peso Normal";						
+					diagnostico = "Acima do peso";						
 				}
 				else
 				{
